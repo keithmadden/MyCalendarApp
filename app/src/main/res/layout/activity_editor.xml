@@ -97,15 +97,27 @@
 
     Its only a text view for the moment until me and keith can implement our apps together -->
 
-    <ImageButton
-        android:id="@+id/imgButtonMap"
+    <!--<ImageButton-->
+        <!--android:id="@+id/imgButtonMap"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@drawable/ic_map_marker_grey600_24dp"-->
+        <!--android:backgroundTint="#fafafa"-->
+        <!--android:layout_alignTop="@+id/textView2"-->
+        <!--android:layout_alignLeft="@+id/imgButtonCal"-->
+        <!--android:layout_alignStart="@+id/imgButtonCal"-->
+        <!--android:onClick="openMapFragment"/>-->
+
+    <Button
+        android:id="@+id/btnGo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_map_marker_grey600_24dp"
         android:backgroundTint="#fafafa"
         android:layout_alignTop="@+id/textView2"
         android:layout_alignLeft="@+id/imgButtonCal"
-        android:layout_alignStart="@+id/imgButtonCal"/>
+        android:layout_alignStart="@+id/imgButtonCal"
+        android:text="Go!"
+        android:onClick="openMapFragment" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -117,7 +129,7 @@
         android:layout_below="@+id/editTime"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="60dp"/>
+        android:layout_marginTop="60dp" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fabSave"

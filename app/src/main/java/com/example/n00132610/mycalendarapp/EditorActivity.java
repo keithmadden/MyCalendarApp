@@ -41,6 +41,7 @@ public class EditorActivity extends AppCompatActivity {
     private String oldText;
     private String oldDate;
     private String oldTime;
+    private Button btnGo;
 
     //private FloatingActionButton enableEdit;
     //private FloatingActionButton enableSave;
@@ -204,5 +205,23 @@ public class EditorActivity extends AppCompatActivity {
     public void showDatePickerDialog(View v) {
         DatePickerFragment newFragment = new DatePickerFragment();
         newFragment.show(getSupportFragmentManager(), "datePicker");
+    }
+
+    public void openMapFragment(View v){
+        setContentView(R.layout.activity_map);
+
+        btnGo = (Button) findViewById(R.id.btnGo);
+
+        btnGo.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(final View v) {
+
+                final Intent intent = new Intent(EditorActivity.this, MapActivity.class);
+
+                EditorActivity.this.startActivity(intent);
+            }
+        });
+
     }
 }
